@@ -110,12 +110,12 @@ describe('The message overlay', function() {
     ubam.showOverlay();
 
     waitsFor(function() {
-        return ubam.addResponseToOverlay.calls.length > 0;
+      return ubam.addResponseToOverlay.calls.length > 0;
     });
     runs(function() {
-        expect(ubam.addResponseToOverlay).toHaveBeenCalled();
-        expect(ubam.addResponseToOverlay.mostRecentCall.args[0])
-          .toContain('HTTP response code: 404');
+      expect(ubam.addResponseToOverlay).toHaveBeenCalled();
+      expect(ubam.addResponseToOverlay.mostRecentCall.args[0])
+        .toContain('HTTP response code: 404');
     });
   });
 
@@ -144,10 +144,10 @@ describe('The message overlay', function() {
     });
     ubam.showOverlay();
     waitsFor(function() {
-        return callbackFunction.calls.length > 0;
+      return callbackFunction.calls.length > 0;
     });
     runs(function() {
-        expect(callbackFunction).toHaveBeenCalled();
+      expect(callbackFunction).toHaveBeenCalled();
     });
   });
 });
