@@ -1,7 +1,21 @@
 /**
- * Jasmine test suite for UBAM website timeout plugin.
+ * jQuery Ubam plugin
+ *
+ * Jasmine test specs.
  * 
- * Chris Blackburn <christopher.blackburn@gmail.com>
+ * Copyright 2012, Chris Blackburn <christopher.blackburn@gmail.com>
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 describe('The session timer', function() {
@@ -60,7 +74,7 @@ describe('The session timer', function() {
     );
 
     jasmine.Clock.tick(10000);
-    expect(ubam.showOverlay).toHaveBeenCalled();   
+    expect(ubam.showOverlay).toHaveBeenCalled();
   });
 });
 
@@ -124,6 +138,16 @@ describe('The message overlay', function() {
   });
 
   it('will call the callback function if one is provided', function() {
-
+    var callbackFunction = jasmine.createSpy('callbackFunction');
+    helper.createWithOptions({
+      'after_dialog_shown': callbackFunction
+    });
+    ubam.showOverlay();
+    waitsFor(function() {
+        return callbackFunction.calls.length > 0;
+    });
+    runs(function() {
+        expect(callbackFunction).toHaveBeenCalled();
+    });
   });
 });

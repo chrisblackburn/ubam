@@ -1,3 +1,24 @@
+/**
+ * jQuery Ubam plugin
+ *
+ * Plugin for displaying an overlay dialog on a website after a pre-defined
+ * session duration.
+ * 
+ * Copyright 2012, Chris Blackburn <christopher.blackburn@gmail.com>
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 ;(function($) {
   $.fn.ubam = function(options) {
     settings = $.extend({
@@ -112,7 +133,7 @@
 
       var self = this;
       $.get(this.settings.overlay_page, function(response) {
-        self.addResponseToOverlay(response)
+        self.addResponseToOverlay(response);
       }).error(function(response) {
         self.addResponseToOverlay(self.getErrorContent(response));
       });

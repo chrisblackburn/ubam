@@ -20,7 +20,7 @@ The plugin has been built against jQuery 1.7.2, though it's likely to work with 
 
 4. Add the UBAM code to every page, or external javascript file, on which you want the overlay to be active:
 
-    $(window).ubam();
+    `$(window).ubam();`
 
 ## <a name="configuration"></a> Configuration
 
@@ -28,33 +28,27 @@ It is possible to configure a number of aspects of the plugin:
 
 ### overlay_page
 
-Default: `ubam.html`
-Specifies the URL that is loaded in to the overlay container.
+Default: `ubam.html`. Specifies the URL that is loaded in to the overlay container.
 
 ### timeout
 
-Default: `900`
-Specifies the number of seconds the user is allowed to use the website in a single session before the overlay is shown.
+Default: `900`. Specifies the number of seconds the user is allowed to use the website in a single session before the overlay is shown.
 
 ### check_interval
 
-Default: `10000`
-Specifies the number of milliseconds between checking whether the timeout has been reached.
+Default: `10000`. Specifies the number of milliseconds between checking whether the timeout has been reached.
 
 ###  cookie_name
 
-Default: `ubam_timer`
-Specifies the name of the cookie.
+Default: `ubam_timer`. Specifies the name of the cookie.
 
 ### close_class
 
-Default `.ubam-close`
-Specifies the class of the element that is used to close the overlay and reset the timer.
+Default `.ubam-close`. Specifies the class of the element that is used to close the overlay and reset the timer.
 
 ### after_dialog_shown
 
-Default: `null`
-Specifies a callback function that is invoked after the dialog box is shown.
+Default: `null`. Specifies a callback function that is invoked after the dialog box is shown.
 
 ### styles
 The following styles are defined in `css/ubam.css` and can be overriden to work with your local design.
