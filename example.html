@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <title>UBAM Example</title>
+
+  <link rel="stylesheet" type="text/css" href="css/ubam.css">
+
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/ubam.js"></script>
+</head>
+
+<body>
+	<h1>Test</h1>
+</body>
+
+  <script type="text/javascript">
+    $(window).ubam({
+      'overlay_page'       : 'ubam.html',
+      'timeout'            : 10,
+      'check_interval'     : 5000,
+      'cookie_name'        : 'my_custom_ubam_timer',
+      'closer_class'       : '.ubam-close',
+      'after_dialog_shown' : function() {
+        alert('dialog box shown');
+      }
+    });
+  </script>
+</html>
