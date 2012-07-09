@@ -115,7 +115,7 @@ describe('The message overlay', function() {
     runs(function() {
       expect(ubam.addResponseToOverlay).toHaveBeenCalled();
       expect(ubam.addResponseToOverlay.mostRecentCall.args[0])
-        .toContain('HTTP response code: 404');
+        .toContain('HTTP response code1: 404');
     });
   });
 
