@@ -1,4 +1,4 @@
-# <a name="title"></a> ubam
+# <a name="title"></a> ubam [![Build Status](https://secure.travis-ci.org/chrisblackburn/ubam.png?branch=master)](http://travis-ci.org/chrisblackburn/ubam)
 
 ## <a name="description"></a> Description
 

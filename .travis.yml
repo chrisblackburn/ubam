@@ -6,6 +6,6 @@ notifications:
 before_script:
   - "export DISPLAY=:99.0" 
   - npm install connect
-  - sudo node lib/server.js &
+  - sudo node lib/test/server.js &
   - sleep 5
 script: phantomjs lib/test/run-tests.js 'http://localhost:80/test.html'
